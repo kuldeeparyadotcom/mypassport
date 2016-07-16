@@ -46,6 +46,8 @@ app.use(function(req, res, next) {
 passport.use(new Strategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
+    //User your domain or local development server address.. devopsmonk.com, 192.168.55.56:3000
+    //The same address must be provided in Valid OAuth redirect URIs (Under Facebook login over https://developers.facebook.com/apps/)
     callbackURL: 'http://192.168.55.56:3000/login/facebook/return'
   },
   function(accessToken, refreshToken, profile, cb) {
