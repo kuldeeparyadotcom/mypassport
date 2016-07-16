@@ -9,7 +9,6 @@ var passport = require('passport');
 var Strategy = require('passport-facebook').Strategy;
 
 
-//Adding for facebook login
 passport.use(new Strategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
@@ -34,7 +33,6 @@ passport.serializeUser(function(user, cb) {
 passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
-
 
 
 // Use application-level middleware for common functionality, including
